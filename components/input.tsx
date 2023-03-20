@@ -1,6 +1,7 @@
 import Output from './output'
 import { useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function Input() {
 	const [jobDescription, setJobDescription] = useState('');
@@ -105,12 +106,12 @@ export default function Input() {
 		
 		</button>
 
-		<a
+		<Link
 		className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
 		href="/about"
 		>
 		Learn More
-		</a>
+		</Link>
 	</div>
 		  
 	</form>

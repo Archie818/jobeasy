@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 
@@ -9,10 +10,10 @@ export default function FAQ() {
 			<h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">Frequently asked questions</h1>
 
 			<div className="mt-8 flex flex-wrap justify-center gap-4">
-				<a href="/"
+				<Link href="/"
 					className="px-8 py-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform bg-gray-200 rounded-md hover:bg-gray-300 dark:text-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
 						Back
-					</a>
+					</Link>
 			</div>
 
 
@@ -153,7 +154,7 @@ export default function FAQ() {
 						</summary>
 
 						<p className="p-8 leading-relaxed text-gray-500 dark:text-gray-300">
-						Use <a href="https://openai.com/chatgpt">ChatGPT</a> to generate a cover letter. Using <a href="https://nextjs.org/">NEXTJS</a> to run the project. The server is hosted by <a href="https://www.netlify.com/">netlify</a>.
+						Use <Link href="https://openai.com/chatgpt">ChatGPT</Link> to generate a cover letter. Using <Link href="https://nextjs.org/">NEXTJS</Link> to run the project. The server is hosted by <Link href="https://www.netlify.com/">netlify</Link>.
 						</p>
 					</details>
 
@@ -199,7 +200,7 @@ export default function FAQ() {
 						</summary>
 
 						<p className="p-8 leading-relaxed text-gray-500 dark:text-gray-300">
-						If you have other questions or idea, please feel free to contact me via <a href="https://twitter.com/Archie_818">Twitter</a> or <a href="https://www.linkedin.com/in/yangy818/">LinkedIn</a>.
+						If you have other questions or idea, please feel free to contact me via <Link href="https://twitter.com/Archie_818">Twitter</Link> or <Link href="https://www.linkedin.com/in/yangy818/">LinkedIn</Link>.
 						</p>
 					</details>
 
