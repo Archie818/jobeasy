@@ -31,7 +31,7 @@ export default async function (req:NextApiRequest, res:NextApiResponse) {
       model: "text-davinci-003",
       prompt: generatePrompt(animal),
       temperature: 0,
-      max_tokens: 2000,
+      max_tokens: 2048,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
     // console.log(completion.data.choices[0].text);

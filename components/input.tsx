@@ -30,8 +30,10 @@ export default function Input() {
 		} catch(error: any) {
 		  // Consider implementing your own error handling logic here
 		  console.error(error);
-		  console.log("error",error.message);
+		//   console.log("error",error.message);
 		  alert(error.message);
+		  setLoading(false);
+		  setJobDescription('');
 		}
 	  }
 	
