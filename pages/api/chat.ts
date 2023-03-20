@@ -43,7 +43,7 @@ export default async function (req:NextApiRequest, res:NextApiResponse) {
       ],
       temperature: 0,
     });
-    res.status(200).json({ result: completion.data.choices[0].message.content });
+    res.status(200).json({ result: completion?.data?.choices?.[0]?.message?.content });
     // console.log(completion.data.choices[0].message.content);
 
   } catch(error: any) {
