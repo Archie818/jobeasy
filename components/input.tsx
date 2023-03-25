@@ -6,18 +6,23 @@ import Link from 'next/link';
 export default function Input() {
 	const [jobDescription, setJobDescription] = useState('');
 	const [result, setResult] = useState('');
-	const [loading, setLoading] = useState(false);
+	const [loadingresume, setLoadingresume] = useState(false);
+	const [loadingcover, setLoadingcover] = useState(false);
 
 	async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-		setLoading(true);
+		const { name } = (event as any).nativeEvent.submitter as HTMLButtonElement;
+		console.log("name",name);
+
+		name === 'resume' ? setLoadingresume(true) : setLoadingcover(true);
+
 		try {
 		  const response = await fetch("/api/chat", {
 			method: "POST",
 			headers: {
 			  "Content-Type": "application/json",
 			},
-			body: JSON.stringify({ animal: jobDescription }),
+			body: JSON.stringify({ animal: jobDescription, name: name}),
 		  });
 	
 		  const data = await response.json();
@@ -27,13 +32,13 @@ export default function Input() {
 		  }
 		  setResult(data.result);
 		  setJobDescription('');
-		  setLoading(false);
+		  name === 'resume' ? setLoadingresume(false) : setLoadingcover(false);
 		} catch(error: any) {
 		  // Consider implementing your own error handling logic here
 		  console.error(error);
 		//   console.log("error",error.message);
 		  alert(error.message);
-		  setLoading(false);
+		  name === 'resume' ? setLoadingresume(false) : setLoadingcover(false);
 		  setJobDescription('');
 		}
 	  }
@@ -63,51 +68,94 @@ export default function Input() {
 	  </label>
 
 	{result && <Output result={result}/>}
+
 	<div className="mt-8 flex flex-wrap justify-center gap-4">
 		<button
-		className={`block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto 
-		${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-		type="submit"
-		onClick={(e) => {
-			if (loading) {
-			e.preventDefault();
-			return;
-			}
-			// Your button action goes here
-		}}
-		>
-		{loading ? (
-			<>
-			<svg
-				className="animate-spin inline-block h-4 w-4 mr-2 text-white"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
+			name='resume'
+			className={`block w-full rounded border border-sky-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto 
+			${loadingresume ? 'opacity-50 cursor-not-allowed' : ''}`}
+			type="submit"
+			onClick={(e) => {
+				if (loadingresume || loadingcover) {
+				e.preventDefault();
+				return;
+				}
+				// Your button action goes here
+			}}
 			>
-				<circle
-				className="opacity-25"
-				cx="12"
-				cy="12"
-				r="10"
-				stroke="currentColor"
-				strokeWidth="4"
-				></circle>
-				<path
-				className="opacity-75"
-				fill="currentColor"
-				d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l1-2.647z"
-				></path>
-			</svg>
-			Generating...
-			</>
-		) : (
-			'Generate'
-		)}
+			{loadingresume ? (
+				<>
+				<svg
+					className="animate-spin inline-block h-4 w-4 mr-2 text-white"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<circle
+					className="opacity-25"
+					cx="12"
+					cy="12"
+					r="10"
+					stroke="currentColor"
+					strokeWidth="4"
+					></circle>
+					<path
+					className="opacity-75"
+					fill="currentColor"
+					d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l1-2.647z"
+					></path>
+				</svg>
+				Generating...
+				</>
+			) : (
+				'Generate Resume'
+			)}
+		</button>
+		<button
+			name='coverletter'
+			className={`block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto 
+			${loadingcover ? 'opacity-50 cursor-not-allowed' : ''}`}
+			type="submit"
+			onClick={(e) => {
+				if (loadingcover || loadingresume) {
+				e.preventDefault();
+				return;
+				}
+				// Your button action goes here
+			}}
+			>
+			{loadingcover ? (
+				<>
+				<svg
+					className="animate-spin inline-block h-4 w-4 mr-2 text-white"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<circle
+					className="opacity-25"
+					cx="12"
+					cy="12"
+					r="10"
+					stroke="currentColor"
+					strokeWidth="4"
+					></circle>
+					<path
+					className="opacity-75"
+					fill="currentColor"
+					d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l1-2.647z"
+					></path>
+				</svg>
+				Generating...
+				</>
+			) : (
+				'Generate Cover Letter'
+			)}
 		
 		</button>
 
 		<Link
-		className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+		className="text-center block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
 		href="/about"
 		>
 		Learn More

@@ -61,7 +61,7 @@ export default function FAQ() {
 						</summary>
 
 						<p className="p-8 leading-relaxed text-gray-500 dark:text-gray-300">
-						Paste a detailed job description into the input box and click the Generate button to generate a cover letter.<br/>
+						Paste a detailed job description into the input box and click the Generate button to generate resuem or cover letter.<br/>
 						Support for different languages, such as English, Chinese, Japanese, Korean, etc. 🚀🚀🚀<br/>
 						</p>
 					</details>
@@ -154,7 +154,7 @@ export default function FAQ() {
 						</summary>
 
 						<p className="p-8 leading-relaxed text-gray-500 dark:text-gray-300">
-						Use <Link href="https://openai.com/chatgpt">ChatGPT</Link> to generate a cover letter. Using <Link href="https://nextjs.org/">NEXTJS</Link> to run the project. The server is hosted by <Link href="https://www.netlify.com/">netlify</Link>.
+						Use <Link href="https://openai.com/chatgpt">ChatGPT</Link> to generate a cover letter. Using <Link href="https://nextjs.org/">NEXTJS</Link> to run the project. The server is hosted by <Link href="https://m.do.co/c/02c91f967ad7">DigitalOcean</Link>. 💙💙💙
 						</p>
 					</details>
 
@@ -200,7 +200,7 @@ export default function FAQ() {
 						</summary>
 
 						<p className="p-8 leading-relaxed text-gray-500 dark:text-gray-300">
-						If you have other questions or idea, please feel free to contact me via <Link href="https://twitter.com/Archie_818">Twitter</Link> or <Link href="https://www.linkedin.com/in/yangy818/">LinkedIn</Link>.
+						If you have other questions or idea, please feel free to contact me via <Link href="https://twitter.com/Archie_818">Twitter</Link> or <Link href="https://www.linkedin.com/in/yangy818/">LinkedIn</Link>. 🤗🤗🤗
 						</p>
 					</details>
 

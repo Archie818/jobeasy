@@ -1,6 +1,11 @@
 export default function Footer() {
+  const myStyles = {
+  //  minHeight: "calc(100vh - 150px)",
+  // minHeight: "100px",
+  minHeight: "30vh",
+  };
 	return (
-<footer aria-label="Site Footer" className="bg-gray-900 text-white">
+<footer aria-label="Site Footer" className="bg-gray-900 text-white" style={myStyles}>
   <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
 
     <ul className="mt-12 flex justify-center gap-6 md:gap-8">

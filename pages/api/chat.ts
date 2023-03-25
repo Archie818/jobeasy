@@ -17,10 +17,19 @@ export default async function (req:NextApiRequest, res:NextApiResponse) {
   }
 
   const animal = req.body.animal || '';
+  const name = req.body.name || '';
   if (animal.trim().length === 0) {
     res.status(400).json({
       error: {
-        message: "Please enter a valid animal",
+        message: "Please enter a valid content",
+      }
+    });
+    return;
+  }
+  if (name.trim().length === 0) {
+    res.status(400).json({
+      error: {
+        message: "What you want to generate?",
       }
     });
     return;
@@ -39,7 +48,7 @@ export default async function (req:NextApiRequest, res:NextApiResponse) {
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [
-        { role: 'user', content: generatePrompt(animal) }
+        { role: 'user', content: generatePrompt(animal,name) }
       ],
       temperature: 0,
     });
@@ -62,9 +71,9 @@ export default async function (req:NextApiRequest, res:NextApiResponse) {
   }
 }
 
-function generatePrompt(animal: string) {
+function generatePrompt(animal: string, name: string) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-    return `Help me generate a cover letter in the same language as the job description.
+    return `Help me generate a ${name} in the same language as the job description.
     ${capitalizedAnimal}`
 }
