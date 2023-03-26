@@ -1,5 +1,7 @@
 # JobEasy
 
+![JobEasy](https://github.com/Archie818/jobeasy/tree/main/public/jobeasy.jpeg)
+
 JobEasy is an open-source online platform that helps job seekers create professional resumes and cover letters in minutes. Built using Next.js and OpenAI technology, JobEasy leverages cutting-edge AI to deliver a customized and effective solution for job applicants in any industry.
 
 ## Features
@@ -40,7 +42,7 @@ yarn dev
 
 ## Learn More
 
-To learn more about JobEasy, visit our website at https://jobeasy.pro. For support or assistance, please contact us at support@jobeasy.pro.
+To learn more about JobEasy, visit our website at https://jobeasy.pro. For support or assistance, please contact us at Archie (https://twitter.com/Archie_818).
 
 ## Author
 
