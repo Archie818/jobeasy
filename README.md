@@ -42,11 +42,11 @@ yarn dev
 
 ## Learn More
 
-To learn more about JobEasy, visit our website at https://jobeasy.pro. For support or assistance, please contact us at Archie (https://twitter.com/Archie_818).
+To learn more about JobEasy, visit our website at https://jobeasy.pro. For support or assistance, please contact us at [Archie Twitter](https://twitter.com/Archie_818).
 
 ## Author
 
-JobEasy was created by Archie (https://github.com/Archie818).
+JobEasy was created by [Archie](https://github.com/Archie818).
 
 ## License
 
