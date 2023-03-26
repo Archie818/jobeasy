@@ -22,7 +22,7 @@ export default function Input() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ animal: jobDescription, name: name }),
+        body: JSON.stringify({ jobDiscriptions: jobDescription, name: name }),
       });
 
       const data = await response.json();
