@@ -1,6 +1,6 @@
 # JobEasy
 
-![JobEasy](https://ibb.co/31KbsxH)
+![JobEasy](public/jobeasy.jpeg)
 
 JobEasy is an open-source online platform that helps job seekers create professional resumes and cover letters in minutes. Built using Next.js and OpenAI technology, JobEasy leverages cutting-edge AI to deliver a customized and effective solution for job applicants in any industry.
 
