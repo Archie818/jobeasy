@@ -1,8 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JobEasy
+
+JobEasy is an open-source online platform that helps job seekers create professional resumes and cover letters in minutes. Built using Next.js and OpenAI technology, JobEasy leverages cutting-edge AI to deliver a customized and effective solution for job applicants in any industry.
+
+## Features
+
+- Quick and easy resume and cover letter generation: JobEasy offers a user-friendly interface that guides users through the process of creating customized resumes and cover letters that stand out to potential employers.
+- Expert AI recommendations: JobEasy's AI technology analyzes the user's input and offers tailored suggestions for optimizing the resume and cover letter based on industry-specific standards and best practices.
+- Safe and secure: the work does not collect statistics on any user, ensuring that users' personal and sensitive information is protected at all times.
 
 ## Getting Started
 
-First, run the development server:
+To get started with JobEasy, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Archie818/JobEasy.git
+```
+
+2. Install the required dependencies by running the following command in the project directory:
 
 ```bash
 npm run dev
@@ -12,27 +28,26 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Start the development server by running the following command:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Open your web browser and navigate to http://localhost:3000 to view the project.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about JobEasy, visit our website at https://jobeasy.pro. For support or assistance, please contact us at support@jobeasy.pro.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+JobEasy was created by Archie (https://github.com/Archie818).
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+JobEasy is licensed under the MIT license. See LICENSE for more information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for choosing JobEasy! We're excited to help you take your career to the next level.

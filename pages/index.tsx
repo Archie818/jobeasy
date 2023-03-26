@@ -1,7 +1,6 @@
-import Head from 'next/head'
-import Banner from '@/components/banner'
-import Footer from '@/components/footer'
-
+import Head from "next/head";
+import Banner from "@/components/banner";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -12,10 +11,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/work.ico" />
       </Head>
-      <main className='flex flex-col min-h-screen'>
+      <main className="flex flex-col min-h-screen">
         <Banner />
         <Footer />
       </main>
     </>
-  )
+  );
 }
