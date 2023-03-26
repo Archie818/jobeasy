@@ -30,7 +30,23 @@ yarn dev
 pnpm dev
 ```
 
-3. Start the development server by running the following command:
+3. Make a copy of the example environment variables file
+
+On Linux systems:
+
+```bash
+$ cp .env.example .env
+```
+
+On Windows:
+
+```bash
+$ copy .env.example .env
+```
+
+4. Add your API key to the newly created .env file
+
+5. Start the development server by running the following command:
 
 ```bash
 npm run dev
@@ -38,7 +54,7 @@ npm run dev
 yarn dev
 ```
 
-4. Open your web browser and navigate to http://localhost:3000 to view the project.
+6. Open your web browser and navigate to http://localhost:3000 to view the project.
 
 ## Learn More
 
