@@ -76,6 +76,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 function generatePrompt(jobDiscriptions: string, name: string) {
   const capitalizedJD =
   jobDiscriptions[0].toUpperCase() + jobDiscriptions.slice(1).toLowerCase();
-  return `Help me generate a ${name} in the same language as the job description.
-    ${capitalizedJD}`;
+  const generateName = name==="coverletter" ? "cover letter" : name;
+  return `Create a ${generateName} in the same language as the job description:
+  ${capitalizedJD}`;
 }
