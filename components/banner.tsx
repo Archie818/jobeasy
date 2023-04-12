@@ -5,7 +5,7 @@ export default function Banner() {
     <section className="bg-gray-900 text-white">
       <div
         className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:items-center "
-        style={{ marginTop: "80px" }}
+        style={{ marginTop: "0px", minHeight: "70vh" }}
       >
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
